@@ -1,16 +1,18 @@
-test_iter: 3500 #3500次才能迭代全部测试数据
-test_interval: 1000 #每隔1000次做一次测试
-base_lr: 0.05
-display: 20 #每训练20次显示一次
-max_iter: 320000 #最大迭代次数
+test_iter: 3500
+test_interval: 1000
+base_lr: 0.000001
+display: 200
+max_iter: 250000
 lr_policy: "poly"
-power: 1.0
+power: 1
 momentum: 0.9
 weight_decay: 0.0005
-snapshot: 10000 #每10000次保存一次模型
-snapshot_prefix: "alexnet_hccr" #保存地址
-solver_mode: GPU #GPU训练
+snapshot: 2000
+snapshot_prefix: "model_iter_"
 random_seed: 0
-net: "/home/kesci/work/Alex_hccr_train_val.prototxt"
+net: "/home/ssw/Desktop/LX/handwrite/data/train_val.prototxt"
 test_initialization: false
 iter_size: 2
+type: "Adam"
+stepsize: 3000
+solver_mode: GPU
